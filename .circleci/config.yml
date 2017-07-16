@@ -112,7 +112,8 @@ jobs:
             cf api https://api.run.pivotal.io
             cf auth idugalic@gmail.com $CF_PASSWORD
             cf target -o idugalic -s Prod
-            cf push prod-my-company-configuration-backingservice -p workspace/*.jar
+            cf push prod-my-company-configuration-backingservice -p workspace/*.jar --no-start
+            cf restart prod-my-company-configuration-backingservice
       
   
 workflows:
