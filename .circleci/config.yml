@@ -78,7 +78,7 @@ jobs:
             cf auth idugalic@gmail.com $CF_PASSWORD
             cf target -o idugalic -s Stage
             cf push stage-my-company-configuration-backingservice -p workspace/*.jar --no-start
-            cf restart stage-my-company-monolith
+            cf restart stage-my-company-configuration-backingservice
             
   
   # A very simple e2e test    
